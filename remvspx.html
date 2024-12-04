@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem vs px Test</title>
+    <style>
+      /* Base font size for root element */
+      html {
+        /*font-size: 16px;*/
+        /*if we set explicitly then we will not understand the difference if we change browser font as our element will take root font from here  */
+        /* 1rem = 16px */
+      }
+
+      /* Styles for elements using rem and px */
+      .rem-text {
+        font-size: 2rem; /* 2rem = 32px */
+        margin-bottom: 20px;
+      }
+
+      .px-text {
+        font-size: 32px; /* Fixed size 32px */
+        margin-bottom: 20px;
+      }
+
+      .container {
+        padding: 20px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Test rem vs px</h1>
+      <p class="rem-text">
+        This text is using <strong>rem</strong> for font size. It should scale
+        with browser zoom and font size settings.
+      </p>
+      <p class="px-text">
+        This text is using <strong>px</strong> for font size. It should stay the
+        same size regardless of zoom and font size settings.
+      </p>
+      <p>
+        Adjust the font size settings in your browser and observe the
+        differences!
+      </p>
+    </div>
+  </body>
+</html>
